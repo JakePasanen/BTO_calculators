@@ -61,7 +61,11 @@ def process_leg_to_fairvalue(leg):
     if '|' in leg:
         spl = leg.split('|')
         probs = [process_leg_to_fairvalue(x) for x in spl]
-        out = probs.sum()
+        p_not = 1
+        for pp in probs:
+            p_not = p_not * ( 1 - pp )
+        
+        out = 1 - p_not
         return out
         
         
