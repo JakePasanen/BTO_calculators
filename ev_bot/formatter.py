@@ -36,10 +36,10 @@ def format_ev(payout, dec_odds, fv_input, win_prob, fv_line_amer, ev, boost=None
     if ev > 0:
         units_returned = dec_odds
         output += 'Kelly Values / Return:\n'
-        output += f'  Full: {kelly_units:0.1f}u -> {kelly_units*units_returned:0.1f}u\n'
-        output += f'  1/2 : {kelly_units*0.5:0.1f}u -> {kelly_units*units_returned*0.5:0.1f}u\n'
-        output += f'  1/4 : {kelly_units*0.25:0.1f}u -> {kelly_units*units_returned*0.25:0.1f}u\n'
-        output += f'  1/8 : {kelly_units*0.125:0.1f}u -> {kelly_units*units_returned*0.125:0.1f}u\n'
+        output += f'  Full: {kelly_units:0.2f}u -> {kelly_units*units_returned:0.2f}u\n'
+        output += f'  1/2 : {kelly_units*0.5:0.2f}u -> {kelly_units*units_returned*0.5:0.2f}u\n'
+        output += f'  1/4 : {kelly_units*0.25:0.2f}u -> {kelly_units*units_returned*0.25:0.2f}u\n'
+        output += f'  1/8 : {kelly_units*0.125:0.2f}u -> {kelly_units*units_returned*0.125:0.2f}u\n'
     
     return output
 
